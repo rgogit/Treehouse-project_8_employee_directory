@@ -1,0 +1,214 @@
+/* Base Styles */
+*{  
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: rgb(248, 246, 246);
+    position: relative;
+}
+header{
+    display:flex;
+    flex-direction: column;
+}
+.searchTerm{
+    border-radius: 5px;
+    margin: auto;
+    width:50%;
+    padding-left:.5em;
+    border: 1px solid #778;
+}
+.searchTerm:hover{
+    cursor: pointer;
+    box-shadow:0px 0px .5px .5px rgb(105, 105, 105) inset;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+.name{
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+.email,
+.address{
+    font-size:.9em;
+}
+
+/* Layout */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(134, 134, 134, 0.4)
+}
+.wrapper{
+    width:89%;
+    margin: auto;
+    padding-top: 2em;
+}
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+}
+.card:hover{
+    cursor: pointer;
+    box-shadow:0px 0px .5px .5px rgb(105, 105, 105) inset;
+}
+.avatar{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    padding: .75em;
+}
+.text-container,
+.text-container2{
+    margin: auto;  
+    text-align: center;
+}
+.text-container2 h2{
+    margin: 7px auto;
+}
+.avatar2{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: .35em;
+    margin-top: .25em;
+}
+.modal {
+    width: 85%;
+    margin:3% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 25px 20px 8px;
+}
+.modal-content{
+    margin-top:1%;
+}
+.modal-close {
+    position: absolute;
+    right: 8%;
+    top: 2%;
+    font-size: 1.3em;
+    background-color: #fff;
+    border-style: none;
+    cursor: pointer;
+}
+.modal-close:hover,
+.langle:hover,
+.rangle:hover{
+    cursor: pointer;
+    background: rgba(141, 141, 141, 0.1);
+    border-radius: 18%;
+    box-shadow:0px 0px 0px .5px rgb(36, 36, 36) inset;
+    font-weight: bolder;
+}
+.controls{
+    display: flex;
+    justify-content: space-around;
+}
+.langle,
+.rangle{
+    margin: 8px 22% 1px; 
+    font-size:1.5em; 
+    background-color: #fff;
+    border-style: none;
+  }
+.hidden {
+    display: none;
+}
+
+/* Media Queries */
+@media (min-width:768px){
+    header{
+        flex-direction: row;
+    }
+    .searchTerm{
+        width:25%;
+    }
+    .headSpace{
+        width:15.5%;
+    }
+    h1{
+        text-align: left;
+        padding-left: 10px;
+    }
+    .wrapper{
+        width:97.5%;       
+    }
+    .grid-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card{
+        width:47%;
+        margin:10px;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: center;
+    }
+    .avatar{
+        width: 100px;
+        height: 100px;
+        margin-right: .8em;
+    }
+    .text-container{
+        text-align: left;
+        line-height: .65em;
+        margin-left: 0em;
+    }
+    .name{
+        font-size: 1.2em;
+    }
+    .email,
+    .address{
+    font-size:.9em;
+    }
+    .modal {
+        width: 45%;
+    }
+}
+
+@media (min-width:1024px){
+    .wrapper{
+        width:98%;
+    }
+    .card{
+        width:31%;    
+    }
+    .headSpace{
+        width:33%;
+    }
+    .name{
+        font-size: 1em;
+    }
+    .email,
+    .address{
+    font-size:.7em;
+    }
+    .modal {
+        width: 33%;
+    }
+}
